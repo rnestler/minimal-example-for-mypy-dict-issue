@@ -17,7 +17,8 @@ this_is_ok_again: dict[str, Union[bool, float]] = {
     **{f"value_{n}": float(n) for n in range(2)},
 }
 
-but_this_not_ok_again: OrderedDict[str, Union[bool, float]] = OrderedDict({
+MyOrderedDict = OrderedDict[str, Union[bool, float]]
+but_this_not_ok_again: MyOrderedDict = MyOrderedDict({
     "bar": True,
     **{f"value_{n}": float(n) for n in range(2)},
 })
